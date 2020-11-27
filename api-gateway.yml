@@ -1,0 +1,24 @@
+eureka:
+  instance:
+    instance-id: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${random.value}}}
+    lease-renewal-interval-in-seconds: 10 
+  client:
+    registry-fetch-interval-seconds: 5
+  
+
+server:
+  port: 9090
+  
+zuul:
+  host:
+    connect-timeout-millis: 5000000
+    socket-timeout-millis: 5000000
+  routes:
+    resource-service:
+      path: /resource/**
+      service-id: resource-service
+      strip-prefix: true
+    user-service:
+      path: /user/**
+      service-id: resource-service
+      strip-prefix: true
