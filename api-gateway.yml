@@ -22,3 +22,7 @@ zuul:
       path: /user/**
       service-id: resource-service
       strip-prefix: true
+    auth-server:
+      path: /auth/**
+      service-id: auth-server
+      strip-prefix: true
