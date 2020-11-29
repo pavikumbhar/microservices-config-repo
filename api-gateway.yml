@@ -32,7 +32,7 @@ zuul:
       sensitiveHeaders:
     user:
       path: /userauth/**
-      stripPrefix: tue
+      stripPrefix: true
       serviceId: auth-server
       sensitiveHeaders:
 
