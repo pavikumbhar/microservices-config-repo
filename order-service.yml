@@ -1,6 +1,6 @@
 eureka:
   instance:
-    instance-id: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${random.value}}}
+    #instance-id: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${random.value}}}
     lease-renewal-interval-in-seconds: 10 
   client:
     registry-fetch-interval-seconds: 5
